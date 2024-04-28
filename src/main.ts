@@ -64,7 +64,7 @@ video.addEventListener("play", () => {
     const imgTag = frames.children[i % framesCount] as HTMLImageElement;
     imgTag.className = "frame";
     imgTag.src = canvas.toDataURL("image/png");
-    // @ts-ignore object-view-box is now generally supported
+    // @ts-ignore object-view-box is not generally supported now
     imgTag.style.objectViewBox = `inset(0px ${
       (i * (canvas.width / framesCount)) % canvas.width
     }px 0px 0px)`;
